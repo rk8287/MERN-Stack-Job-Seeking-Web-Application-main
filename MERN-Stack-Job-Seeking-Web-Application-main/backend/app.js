@@ -16,11 +16,15 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
-    method: ["GET", "POST", "DELETE", "PUT"],
+    origin: [
+      'http://localhost:5173', 
+      'https://mern-stack-job-seeking-web-application-26la.onrender.com'
+    ], 
+    methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
+
 
 
 
